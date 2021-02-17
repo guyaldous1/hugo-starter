@@ -11,10 +11,10 @@
 # Production context: all deploys from the Production branch set in your site's
 # deploy contexts will inherit these settings.
 [context.production]
-    environment = { HUGO_VERSION = "0.8.0"}
+    environment = { HUGO_VERSION = "0.80.0"}
 
 # Deploy Preview context: all deploys generated from a pull/merge request will
 # inherit these settings.
 [context.deploy-preview]
     command = "npm run netlify-prev"
-    environment = { HUGO_VERSION = "0.8.0"}
+    environment = { HUGO_VERSION = "0.80.0"}
