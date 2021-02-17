@@ -1,0 +1,41 @@
+{
+   "name": "hugo-starter",
+   "version": "1.0.0",
+   "description": "a hugo starter for lysdexia-digital",
+   "scripts": {
+      "dev": "run-p gulp hugo",
+      "gulp": "gulp watch",
+      "hugo": "hugo server -s hugo -vw",
+      "open": "open http://localhost:1313",
+      "build": "run-s gulp-build hugo-build",
+      "hugo-build": "hugo --minify -s hugo -v",
+      "gulp-build": "gulp build",
+      "hugo-netlify-preview": "hugo --minify -b $DEPLOY_PRIME_URL -s hugo -v",
+      "hugo-netlify": "hugo --minify -b $URL -s hugo -v",
+      "netlify": "run-s gulp-build hugo-netlify",
+      "netlify-prev": "run-s gulp-build hugo-netlify-preview"
+   },
+   "author": "@guyaldous1",
+   "license": "ISC",
+   "devDependencies": {
+      "@babel/core": "^7.9.0",
+      "@babel/preset-env": "^7.9.5",
+      "@rollup/plugin-babel": "^5.3.0",
+      "autoprefixer": "^9.7.6",
+      "cssnano": "^4.1.10",
+      "del": "^5.1.0",
+      "gulp": "^4.0.2",
+      "gulp-babel": "^8.0.0",
+      "gulp-better-rollup": "^4.0.1",
+      "gulp-postcss": "^8.0.0",
+      "gulp-sass": "^4.1.0",
+      "npm-run-all": "^4.1.5",
+      "rollup": "^1.32.1",
+      "rollup-plugin-node-resolve": "^5.2.0",
+      "rollup-plugin-uglify": "^6.0.4"
+   },
+   "dependencies": {
+      "bootstrap": "^4.6.0",
+      "normalize-scss": "^7.0.1"
+   }
+}

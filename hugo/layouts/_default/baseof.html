@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!--meta-->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>{{ block "title" . }}{{ .Title }}{{ end }} | {{ .Site.Title }}</title>
+  <meta name="description" content='{{ block "metadesc" . }}
+  {{ with .Description }}
+    {{ . }}
+  {{ else }}
+    {{ .Site.Params.Description }}
+  {{ end }}
+  {{ end }}' />
+  <meta name="robots" content='{{ block "metarobots" . }}index, follow{{ end }}'>
+
+  <!--Stylesheets-->
+  {{ $style := resources.Get "dist/css/style.css" | fingerprint }}
+  <link rel="stylesheet" href="{{ $style.Permalink }}">
+
+</head>
+
+<body>
+  <div id="page-{{.File.UniqueID}}" class="site-wrapper">
+    {{ partial "header" . }}
+
+    <div id="main-wrapper" class="some-height">
+      {{ block "main" . }}
+      {{ end }}
+    </div>
+
+    {{ block "footer" . }}
+    {{ partial "footer" . }}
+    {{ end }}
+  </div>
+
+<!--Scripts-->
+  {{ $scripts := resources.Get "dist/js/app.js" | fingerprint }}
+  <script type="text/javascript" src="{{ $scripts.Permalink }}"></script>
+
+</body>
+
+</html>

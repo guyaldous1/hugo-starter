@@ -1,0 +1,94 @@
+/*!
+Title: A Hugo Site by Lysdexia Digital
+Author: Lysdexia Digital
+Author URI: https://lysdexia.digital
+*/
+
+/*--------------------------------------------------------------
+# Imports
+--------------------------------------------------------------*/
+// @import "bootstrap/scss/bootstrap";
+// @import "normalize-scss/sass/normalize";
+@import "normalize-scss/sass/normalize/import-now";
+// @import "bootstrap/scss/bootstrap";
+@import "_bb-sass/boostrap";
+
+
+//BB Imports
+@import "_bb-sass/mixins";
+@import "_bb-sass/variables";
+
+
+
+/*--------------------------------------------------------------
+# Globals & Helpers
+--------------------------------------------------------------*/
+
+html{
+  font-size: 14px;
+}
+
+body{
+  overflow-x: hidden;
+  font-family: $font-default;
+  color:$colour-font-default;
+  font-size: 1rem;
+  line-height: 1.67rem;
+  &.no-scroll{
+    overflow: hidden;
+  }
+}
+
+#page.site{
+  overflow-x: hidden;
+}
+
+.full-height{
+  min-height: 100vh;
+}
+
+.almost-full-height{
+  min-height: 90vh;
+}
+
+.some-height{
+  min-height: 60vh;
+}
+
+iframe{
+  max-width: 100%;
+}
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+
+
+.content-style{
+  p{
+    margin-bottom: 1rem;
+  }
+}
+
+/*--------------------------------------------------------------
+# Components
+--------------------------------------------------------------*/
+
+
+
+
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+
+
+
+/*--------------------------------------------------------------
+# Individual Pages
+--------------------------------------------------------------*/
+
+
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/

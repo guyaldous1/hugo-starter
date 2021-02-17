@@ -1,0 +1,15 @@
+baseURL = "https://atest.com/"
+languageCode = "en-au"
+title = "This is a Test"
+
+# disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
+
+[taxonomies]
+  category = "categories"
+
+[params]
+  localphone = "(03) 9349 0500"
+  description = "A hugo site description"
+
+[permalinks]
+  posts = "/:section/:title/"
