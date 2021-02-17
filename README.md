@@ -2,18 +2,28 @@
 
 A boilerplate for hugo websites using gulp, babel, rollup and sass.
 
-#### run directly after download:
+Includes netlify.toml for deployment
+
+#### run directly after download
+```
 npm install
-
-#### develop with:
-npm run dev
-
-#### build with
 npm run build
+```
 
-#### deploy 
+#### dev server
+```
+npm run dev
+```
+
+#### build assets
+```
+npm run build
+```
+
+#### deploy directory
+```
 hugo/public
-
+```
 
 ## Libraries
 gulp, babel, rollup and sass for asset creation
