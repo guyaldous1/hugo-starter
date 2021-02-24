@@ -3,12 +3,9 @@ const sass = require("gulp-sass");
 const postcss = require("gulp-postcss");
 const del = require("del");
 const rollup = require("gulp-better-rollup");
-const babel = require("gulp-babel");
-const resolve = require("rollup-plugin-node-resolve");
+const { babel } = require("@rollup/plugin-babel");
+const { nodeResolve } = require("@rollup/plugin-node-resolve");
 const uglify = require("rollup-plugin-uglify");
-// const uglify = require('gulp-uglify');
-// const concat = require('gulp-concat');
-// const rename = require("gulp-rename");
 
 var distTarget = "./hugo/assets/dist";
 
@@ -48,10 +45,8 @@ gulp.task("scripts", () => {
 			rollup(
 				{
 					plugins: [
-						babel(),
-						resolve({
-							jsnext: true,
-							main: true,
+						babel({ babelHelpers: 'bundled', presets: ['@babel/preset-env'], }),
+						nodeResolve({
 							browser: true,
 						}),
 						uglify.uglify(),
